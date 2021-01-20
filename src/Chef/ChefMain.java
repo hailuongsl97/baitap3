@@ -23,7 +23,7 @@ public class ChefMain {
     }
 
     // phương thức thông báo tới toàn bộ phục vụ
-    public void notifyAllWaiter(boolean status) {
+    public void notifyAllWaiter(String status) {
         for (IObserver waiter : listNotify) {
             waiter.listen(status);//t 
         }
@@ -65,41 +65,43 @@ public class ChefMain {
     
 	public void makeCake() {
 		if(Material.butter<1) {// nếu vật liệu đã hết  sẽ thông báo với phục vụ 
-			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
-			notifyAllWaiter(false);
+//			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
+                        String notify= this.getName()+" thông báo : không đủ nguyên liệu \n";
+			notifyAllWaiter(notify);
 		}else {
-			System.out.print(this.getName()+" đã làm xong bánh\n");
-			notifyAllWaiter(true);
+//			System.out.print(this.getName()+" đã làm xong bánh\n");
+                        String notify= "đã làm xong bánh\n";
+			notifyAllWaiter(notify);
 			Material.butter--;
 		}
 	}
 	public void makeCream() {
 		if(Material.butter<1) {
-			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
-			notifyAllWaiter(false);
+			 String notify= this.getName()+" thông báo : không đủ nguyên liệu \n";
+			notifyAllWaiter(notify);
 		}else {
-			System.out.print(this.getName()+" đã làm xong kem\n");
-			notifyAllWaiter(true);
+			  String notify= "đã làm xong bánh\n";
+			notifyAllWaiter(notify);
 			Material.butter--;
 		}
 	}
 	public void makeChicken() {
 		if(Material.chicken<1) {
-			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
-			notifyAllWaiter(false);
+			 String notify= this.getName()+" thông báo : không đủ nguyên liệu \n";
+			notifyAllWaiter(notify);
 		}else {
-			System.out.print(this.getName()+" đã làm xong gà\n");
-			notifyAllWaiter(true);
+			  String notify= "đã làm xong bánh\n";
+			notifyAllWaiter(notify);
 			Material.chicken--;
 		}
 	}
 	public void makeCoffee() {
 		if(Material.coffee<1) {
-			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
-			notifyAllWaiter(false);
+			 String notify= this.getName()+" thông báo : không đủ nguyên liệu \n";
+			notifyAllWaiter(notify);
 		}else {
-			System.out.print(this.getName()+" đã làm xong cà phê\n");
-			notifyAllWaiter(true);
+			  String notify= "đã làm xong bánh\n";
+			notifyAllWaiter(notify);
 			Material.coffee--;
 		}
 	}

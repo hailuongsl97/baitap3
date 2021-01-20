@@ -43,12 +43,8 @@ public class Waiter extends Feedback implements IObserver{
 		bill.clear();
 	}
     @Override
-    public void listen(boolean status) {
-                if(status == true) {
-			System.out.print("phục vụ mang đồ ăn ra cho khách !\n");
-		}else  {
-			System.out.print("phục vụ xin lỗi khách vì không thực hiện được món ăn! \n");
-		}
+    public void listen(String status) {
+             System.out.println(("Phục vụ chuyển lại lời : "+status));
 		System.out.print("-->> \n");
     }
     

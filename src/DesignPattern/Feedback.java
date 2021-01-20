@@ -13,8 +13,11 @@ package DesignPattern;
 public abstract class Feedback  {
     // đóng vai trò là chain of responsibility
 protected Feedback nextLevel;
+
+// nếu không xử lý dc thi 
 public void setNextLevel( Feedback nextLevel){
 this.nextLevel = nextLevel;
 }
+// phương thức xử lý phàn nàn khách hàng
 public abstract void handleComplain(int level);
 }

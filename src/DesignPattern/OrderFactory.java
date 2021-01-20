@@ -22,13 +22,14 @@ import Member.ManageMember;
  * @author HL
  */
 public class OrderFactory {
+    // đóng vai trò là factory method
     ManageMember manage;
 	public OrderFactory(ManageMember manage) {
 		this.manage = manage;
 	}
 
-   
-	public IMenu getOrder(int index) {
+ 
+	public IMenu getOrder(int index) {// gộp các order lại cần sử dụng cái gì thì cung cấp cái đấy
 		switch(index) {
 		case 1: return new Cake(manage.getRandomChefCanMake(index)); 
 		case 2: return new Cream(manage.getRandomChefCanMake(index)); 

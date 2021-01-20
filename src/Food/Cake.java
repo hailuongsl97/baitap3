@@ -15,7 +15,6 @@ import DesignPattern.IMenu;
  */
 public class Cake implements IMenu{
     ChefMain chef;
-
     public Cake(ChefMain chef) {
         this.chef = chef;
     }

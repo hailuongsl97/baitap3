@@ -13,7 +13,7 @@ import DesignPattern.Feedback;
  * @author HL
  */
 public class Owner  extends Feedback{
-
+ // có 1 chủ sở hữu nên sử dung singleton
     private static Owner owner;
     public static Owner getInstance() {
 		if(owner ==null) {

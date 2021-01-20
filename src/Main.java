@@ -22,6 +22,7 @@ import java.util.Scanner;
  */
 public class Main {
     private static ArrayList<String>  menuFood = new ArrayList<>();
+    // phương thức khởi tạo option cho khách hàng
     private static void  initMenu(){
     menuFood.add("Cake");//1
 		menuFood.add("Cream");//2
@@ -34,10 +35,12 @@ public class Main {
 		menuFood.add("Chicken");//9
 		menuFood.add("Noodles");//10
     }
+    // thông báo đàu tiên 
     private static void printFirstNotification() {
 		System.out.println("1. gọi món");
 		System.out.println("2. phàn nàn dịch vụ");
 	}
+    // option khách hàng phàn nàn
 	private static void printComplainChoice() {
 		System.out.println("1. thái độ phục vụ không tốt");
 		System.out.println("2. món ăn không ngon");
@@ -51,8 +54,8 @@ public class Main {
 	}
     
     public static void main(String[] args) {
-        int choice = 0;
-		int numberChosen = 0;
+                 int select = 0;
+		int numberOption = 0;
 		//thiết lập menu
 		initMenu();
 		//phục vụ trong quán
@@ -85,17 +88,17 @@ public class Main {
 				printMenu();
 				do {
 					System.out.println("xin mời chọn món, nhập 0 để kết thúc!\n");
-					choice = scanner.nextInt();
-					if(choice ==0||choice<0||choice>menuFood.size()) break;
+					select = scanner.nextInt();
+					if(select ==0||select<0||select>menuFood.size()) break;
 					else {
 						//thêm order vào bill 
-						IMenu order = orderFoodFactory.getOrder(choice);
+						IMenu order = orderFoodFactory.getOrder(select);
 						waiter.addToBill(order);
-						numberChosen++;
+						numberOption++;
 					}
 				}
-				while(choice!=0);
-				if(numberChosen!=0) waiter.excuteBill();
+				while(select!=0);
+				if(numberOption!=0) waiter.excuteBill();
 				else System.out.print("cảm ơn đã tới nhà hàng\n");
 				System.out.println("------------------------------");
 				break;

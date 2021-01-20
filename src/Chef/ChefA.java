@@ -20,42 +20,42 @@ public class ChefA extends ChefMain{
 	//các món ăn biết đã làm xong riêng 
 	public void makeHamberger() {
 		if(Material.butter<1) {
-			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
-			super.notifyAllWaiter(false);
+			String notify= this.getName()+" thông báo : không đủ nguyên liệu \n";
+			super.notifyAllWaiter(notify);
 		}else {
-			System.out.print(this.getName()+" đã làm xong hamberger\n");
-			super.notifyAllWaiter(true);
+			 String notify= this.getName()+" đã làm xong phở\n";
+			super.notifyAllWaiter(notify);
 			Material.butter--;
 		}
 	}
 	public void makeJuice() {
 		if(Material.fruit<1) {
-			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
-			super.notifyAllWaiter(false);
+			String notify= this.getName()+" thông báo : không đủ nguyên liệu \n";
+			super.notifyAllWaiter(notify);
 		}else {
-			System.out.print(this.getName()+" đã làm xong nước ép\n");
-			super.notifyAllWaiter(true);
+			 String notify= this.getName()+" đã làm xong phở\n";
+			super.notifyAllWaiter(notify);
 			Material.fruit--;
 		}
 	}
 	public void makeMeat() {
 		if(Material.pork<1) {
-			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
-			super.notifyAllWaiter(false);
+			String notify= this.getName()+" thông báo : không đủ nguyên liệu \n";
+			super.notifyAllWaiter(notify);
 		}else {
-			System.out.print(this.getName()+" đã làm xong thịt\n");
-			super.notifyAllWaiter(true);
+			 String notify= this.getName()+" đã làm xong phở\n";
+			super.notifyAllWaiter(notify);
 			Material.pork--;
 		}
 	}
 	//món mà đầu bếp 2 và đầu bếp 1 đều  biết đã làm xong 
 	public void makeMilktea() {
 		if(Material.milk<1) {
-			System.out.print(this.getName()+" thông báo :không đủ nguyên liệu \n");
-			super.notifyAllWaiter(false);
+			String notify= this.getName()+" thông báo : không đủ nguyên liệu \n";
+			super.notifyAllWaiter(notify);
 		}else {
-			System.out.print(this.getName()+" đã làm xong trà sữa\n");
-			super.notifyAllWaiter(true);
+			 String notify= this.getName()+" đã làm xong phở\n";
+			super.notifyAllWaiter(notify);
 			Material.milk--;
 		}
 	}

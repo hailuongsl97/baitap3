@@ -11,5 +11,5 @@ package DesignPattern;
  */
 public interface IObserver {
     
-   void listen(boolean status );// lắng nghe thông báo của đầu bếp 
+   void listen(String status );// lắng nghe thông báo của đầu bếp 
 }
