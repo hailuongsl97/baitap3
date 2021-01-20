@@ -44,8 +44,8 @@ public class Waiter extends Feedback implements IObserver{
 	}
     @Override
     public void listen(String status) {
-             System.out.println(("Phục vụ chuyển lại lời : "+status));
-		System.out.print("-->> \n");
+        System.out.println(("Phục vụ chuyển lại lời : "+status));
+	System.out.print("-->> \n");
     }
     
 }
